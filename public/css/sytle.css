@@ -1,0 +1,34 @@
+body {
+    background: aliceblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+#app {
+    max-width: 400px;
+    width: 100%;
+}
+
+.card {
+    border: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+    background-color: #007BFF;
+    color: white;
+    text-align: center;
+    border-bottom: none;
+}
+
+.form-label {
+    font-weight: bold;
+}
+
+.btn-primary {
+    background-color: #007BFF;
+    border: none;
+}
