@@ -1,15 +1,15 @@
 <?php
 
 /**
- * User Session and Authentication Management
+ * User Session and EswLogin Management
  *
  * This PHP script handles user session configuration, defines constants,
- * sets secure cookie parameters, and provides logic for user authentication.
+ * sets secure cookie parameters, and provides logic for user EswLogin.
  *
  * PHP version 7.0 or higher
  *
- * @category Authentication
- * @package  User Session and Authentication Management
+ * @category EswLogin
+ * @package  User Session and EswLogin Management
  * @author   José Caruajulca
  */
 
@@ -42,11 +42,11 @@ session_start();
 require_once('app/config/db.php');
 
 /**
- * Authentication Class
+ * EswLogin Class
  *
- * Provides methods for user authentication.
+ * Provides methods for user EswLogin.
  */
-class Authentication
+class EswLogin
 {
     /**
      * Authenticate user
@@ -119,7 +119,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
 
         // Call the method to authenticate the user
-        Authentication::loginUser($usernameOrEmail, $password);
+        EswLogin::loginUser($usernameOrEmail, $password);
     } catch (Exception $e) {
         echo json_encode(['success' => false, 'error_message' => $e->getMessage()]);
     }
